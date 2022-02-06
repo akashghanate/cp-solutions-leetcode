@@ -1,2 +1,2 @@
 # competitive programming-solutions-leetcode
-Collection of LeetCode solutions to ace the coding interview!
+Collection of LeetCode solutions with best Time Complexity and Space Complexity.
