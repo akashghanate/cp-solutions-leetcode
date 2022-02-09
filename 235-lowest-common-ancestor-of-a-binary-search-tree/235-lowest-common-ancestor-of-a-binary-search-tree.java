@@ -12,6 +12,7 @@ class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         TreeNode cur = root;
         
+        // repeatedly check in which part of BST the p, q lies if found return current node
         while(cur!=null){
             if(p.val > cur.val && q.val > cur.val){
                 cur = cur.right;
