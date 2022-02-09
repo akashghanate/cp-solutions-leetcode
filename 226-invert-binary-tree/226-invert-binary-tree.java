@@ -15,23 +15,19 @@
  */
 class Solution {
     public TreeNode invertTree(TreeNode root) {
-        // using recursive DFS (post-order, pre-order)
+        // using recursive DFS (post-order/pre-order)
         
-        return invert(root);
-    }
-    
-    private TreeNode invert(TreeNode root){
         if(root == null){
             return null;
         }
         
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
+        TreeNode left = root.left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(left);
         
-        invert(root.left);
-        invert(root.right);
         
         return root;
     }
+    
+    
 }
