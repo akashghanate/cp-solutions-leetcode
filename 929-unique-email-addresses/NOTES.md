@@ -1,9 +1,19 @@
-// using string methods
+​
 HashSet<String> unique= new HashSet<String>();
 for(String s: emails){
-String[] localDomain = s.split("@");
-String[] locals = localDomain[0].split("\\+");
-String local = locals[0].replaceAll(".","");
-unique.add(local+localDomain[1]);
+int i=0;
+String local="";
+while(s.charAt(i)!='@' && s.charAt(i)!='+'){
+if(s.charAt(i)!='.'){
+local = local + s.charAt(i);
+}
+i++;
+}
+while(s.charAt(i)!='@'){
+i++;
+}
+String domain = s.substring(i);
+unique.add(local+domain);
 }
 return unique.size();
+​
