@@ -23,6 +23,7 @@ class Solution {
             return false;
         
         curSum += root.val;
+        // check for leaf node
         if(root.left == null & root.right==null){
             return curSum == target;
         }
