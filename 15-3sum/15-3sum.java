@@ -25,6 +25,8 @@ class Solution {
                 }
                 else{
                     res.add(new ArrayList<Integer>(Arrays.asList(nums[i],nums[left],nums[right])));
+                    
+                    // to avoid duplicate triplets
                     left++;
                     while(nums[left]==nums[left-1] && left < right)
                         left++;
