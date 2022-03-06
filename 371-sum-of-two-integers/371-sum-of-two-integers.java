@@ -12,7 +12,7 @@ class Solution {
         
         // using b for carry and at last carry will be 0
         while(b!=0){
-            int temp = (a & b) << 1; 
+            int temp = (a & b) << 1; // carry 
             a = a ^ b;
             b = temp;
         }
